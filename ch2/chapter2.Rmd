@@ -1,0 +1,39 @@
+---
+title: "Chapter 2 Solutions"
+output: html_notebook
+editor_options: 
+  chunk_output_type: inline
+---
+
+*A test is graded from 0 to 50, with an average score of 35 and a standard deviation of 10. For comparison to other tests, it would be convenient to rescale to a mean of 100 and standard deviation of 15.* 
+
+*(a) How can the scores be linearly transformed to have this new mean and standard deviation?*
+
+Lets define our random variable, 
+
+
+$X$ : a test graded from 0 to 50 
+$\mu_X = 35 ,\sigma_X = 10$
+
+
+To have this new mean and std lets define a r.v called Y
+
+$Y=a*X+b$ we know from the question our new variable has $\mu_Y = 100 ,\sigma_Y = 15$
+
+Lets find a and b,
+
+\[E[Y] = a*E[X] + b \\
+100 = a*35 + b \\
+V[Y] = a^2*V[X] \\
+\sqrt{V[Y]} = \sqrt{a^2V[X]}\\
+15 = 10*a ; \ a = 1.5 \\
+100 = 1.5*35 + b; \ b = 47.5\]
+
+And plugging results we get $Y = 1.5*X+47.5$
+
+
+*(b) There is another linear transformation that also rescales the scores to have
+mean 100 and standard deviation 15. What is it, and why would you not want to use it for this purpose?*
+
+When we calculated term a we took root of $a^2$ since a can be $\pm1.5$ we can take $a$ as -1.5. Thus we get \[a = -1.5; \ b= 100 + 1.5*35 = 152.5 \\Y = -1.5*X+ 152.5\] 
+We don't want that equation. Lets take X as 0 and 50 plugging these values to transformation of Y we have 152.5 and 77.5 which is not a desirable transformation. 
